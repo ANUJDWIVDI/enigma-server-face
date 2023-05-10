@@ -2,12 +2,69 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>My Landing Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <title>My Page</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
   <style>
-     video {
+    #intro, #next {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #next {
+      display: none;
+    }
+
+
+    .server-btn {
+      margin: 10px;
+    }
+
+    #team {
+      margin-top: 50px;
+    }
+
+    .team-member {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .team-member img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+
+    .team-member a {
+      margin: 10px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .poster {
+      max-width: 100%;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .server-btn {
+        margin: 10px 0;
+      }
+
+      .team-member {
+        margin: 20px 0;
+      }
+
+      .poster {
+        margin-top: 20px;
+      }
+    }
+       video {
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +73,7 @@
   object-fit: cover;
 }
 
-        @media only screen and (min-width: 768px) {
+            @media only screen and (min-width: 768px) {
             video {
                 display: block;
             }
@@ -36,93 +93,103 @@
                 display: block;
             }
         }
-    /* Customize your styles here */
-    body {
-      padding-top: 70px;
-    }
-    .team {
-      display: none;
-    }
-    .team.active {
-      display: block;
-    }
-    body {
-      padding-top: 70px;
-      background-color: #000000;
-      color: #ffffff;
-    }
-    .navbar {
-      background-color: #000000;
-    }
-    .navbar-dark .navbar-nav .nav-link {
-      color: #ffffff;
-    }
-    .navbar-dark .navbar-nav .nav-link:hover {
-      color: #ff0000;
-    }
-    .btn-primary {
-      background-color: #ff0000;
-      border-color: #ff0000;
-    }
-    .btn-primary:hover {
-      background-color: #000000;
-      border-color: #ff0000;
-    }
-    .team {
-      display: none;
-    }
-    .team.active {
-      display: block;
-    }
+
   </style>
 </head>
 <body>
-  <!-- Top Navigation Bar -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">My Landing Page</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Developer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://linktr.ee/anuj_dwivedi">Conatact Developer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Video -->
-  <video autoplay loop muted>
-    <source src="/laptop-intro.mp4" type="video/mp4">
-</video>
-<video autoplay loop muted id="mobile-video">
-    <source src="/mobile-intro.mp4" type="video/mp4">
-</video>
-
-  <!-- Buttons for server selection -->
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col text-center">
-        <button type="button" class="btn btn-primary btn-lg mr-2" onclick="window.location.href='https://server1.com'">Server 1</button>
-        <button type="button" class="btn btn-primary btn-lg mr-2" onclick="window.location.href='https://server2.com'">Server 2</button>
-        <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='https://server3.com'">Server 3</button>
+<div id="first">
+   <video autoplay loop muted>
+        <source src="/laptop-intro.mp4" type="video/mp4">
+    </video>
+    <video autoplay loop muted id="mobile-video">
+        <source src="/mobile-intro.mp4" type="video/mp4">
+    </video>
+</div>
+<div id="next">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-6 text-center">
+        <h1>Welcome!</h1>
+        <p>Please select a server:</p>
+        <div>
+          <button class="btn btn-primary server-btn">Server 1</button>
+          <button class="btn btn-primary server-btn">Server 2</button>
+          <button class="btn btn-primary server-btn">Server 3</button>
+          <button class="btn btn-primary server-btn">Server 4</button>
+          <button class="btn btn-primary server-btn">Server 5</button>
+        </div>
       </div>
     </div>
   </div>
-  <!-- Required scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <div class="container-fluid" id="team">
+    <div class="row">
+      <div class="col-md-3 team-member">
+        <img src="/member1.jpg" alt="Team Member 1">
+        <h4>Team Member 1</h4>
+        <div>
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+      <div class="col-md-3 team-member">
+        <img src="/member2.jpg" alt="Team Member 2">
+        <h4>Team Member 2</h4>
+        <div>
+<a href="#">Twitter</a>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+</div>
+</div>
+<div class="col-md-3 team-member">
+<img src="/member3.jpg" alt="Team Member 3">
+<h4>Team Member 3</h4>
+<div>
+<a href="#">Twitter</a>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+</div>
+</div>
+<div class="col-md-3 team-member">
+<img src="/member4.jpg" alt="Team Member 4">
+<h4>Team Member 4</h4>
+<div>
+<a href="#">Twitter</a>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+</div>
+</div>
+</div>
+
+  </div>
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-6 text-center">
+        <h2>Upcoming Event</h2>
+        <p>A strategically challenging and thought-provoking competition desgined for the detectives.</p>
+        <img src="/poster-f.png" alt="Poster" class="poster">
+        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script>
+  var first = document.getElementById("first");
+  var next = document.getElementById("next");
+  var introVideo = document.getElementById("intro");
+  var bgVideo = document.getElementById("bg");
+  var button = document.getElementById("myButton");
+
+  setTimeout(function() {
+    first.style.display = "none";
+    next.style.display = "block";
+  }, 20000);
+
+</script>
 
 </body>
 </html>
