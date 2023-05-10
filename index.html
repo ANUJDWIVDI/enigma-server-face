@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <style>
+    /* Customize your styles here */
+    body {
+      padding-top: 70px;
+    }
+    .team {
+      display: none;
+    }
+    .team.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">My Landing Page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Developer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 3D Model iframe -->
+  <iframe src="https://sketchfab.com/models/6c51d71a56f84d55827d3e3c5181a6ab/embed" width="100%" height="480" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+  <!-- Buttons for server selection -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary btn-lg mr-2" onclick="showTeam(1, 5)">Server 1</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="showTeam(6, 10)">Server 2</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teams -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="team active">
+          <h1>Team 1 to 5</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate gravida nulla in efficitur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac faucibus magna. Sed eget feugiat tortor. Sed maximus, sapien eu consequat pharetra, arcu felis faucibus felis, vel fermentum tellus lectus eu tellus.</p>
+        </div>
+        <div class="team">
+          <h1>Team 6 to 10</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate gravida nulla in efficitur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac faucibus magna. Sed eget feugiat tortor. Sed maximus, sapien eu consequat pharetra, arcu felis faucibus felis, vel fermentum tellus lectus eu tellus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Required scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
