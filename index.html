@@ -17,6 +17,34 @@
     .team.active {
       display: block;
     }
+    body {
+      padding-top: 70px;
+      background-color: #000000;
+      color: #ffffff;
+    }
+    .navbar {
+      background-color: #000000;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: #ff0000;
+    }
+    .btn-primary {
+      background-color: #ff0000;
+      border-color: #ff0000;
+    }
+    .btn-primary:hover {
+      background-color: #000000;
+      border-color: #ff0000;
+    }
+    .team {
+      display: none;
+    }
+    .team.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -44,31 +72,19 @@
     </div>
   </nav>
 
-  <!-- 3D Model iframe -->
-  <iframe src="https://sketchfab.com/models/6c51d71a56f84d55827d3e3c5181a6ab/embed" width="100%" height="480" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  <!-- Video -->
+  <video autoplay muted loop>
+    <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
   <!-- Buttons for server selection -->
   <div class="container mt-5">
     <div class="row">
       <div class="col text-center">
-        <button type="button" class="btn btn-primary btn-lg mr-2" onclick="showTeam(1, 5)">Server 1</button>
-        <button type="button" class="btn btn-primary btn-lg" onclick="showTeam(6, 10)">Server 2</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Teams ->
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col">
-        <div class="team active">
-          <h1>Team 1 to 5</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate gravida nulla in efficitur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac faucibus magna. Sed eget feugiat tortor. Sed maximus, sapien eu consequat pharetra, arcu felis faucibus felis, vel fermentum tellus lectus eu tellus.</p>
-        </div>
-        <div class="team">
-          <h1>Team 6 to 10</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate gravida nulla in efficitur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac faucibus magna. Sed eget feugiat tortor. Sed maximus, sapien eu consequat pharetra, arcu felis faucibus felis, vel fermentum tellus lectus eu tellus.</p>
-        </div>
+        <button type="button" class="btn btn-primary btn-lg mr-2" onclick="window.location.href='https://server1.com'">Server 1</button>
+        <button type="button" class="btn btn-primary btn-lg mr-2" onclick="window.location.href='https://server2.com'">Server 2</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='https://server3.com'">Server 3</button>
       </div>
     </div>
   </div>
