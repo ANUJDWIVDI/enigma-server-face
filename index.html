@@ -7,6 +7,35 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <style>
+     video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+        @media only screen and (min-width: 768px) {
+            video {
+                display: block;
+            }
+
+            #mobile-video {
+                display: none;
+            }
+        }
+
+
+        @media only screen and (max-width: 767px) {
+            video {
+                display: none;
+            }
+
+            #mobile-video {
+                display: block;
+            }
+        }
     /* Customize your styles here */
     body {
       padding-top: 70px;
@@ -73,10 +102,12 @@
   </nav>
 
   <!-- Video -->
-  <video autoplay muted loop>
-    <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <video autoplay loop muted>
+    <source src="/laptop-intro.mp4" type="video/mp4">
+</video>
+<video autoplay loop muted id="mobile-video">
+    <source src="/mobile-intro.mp4" type="video/mp4">
+</video>
 
   <!-- Buttons for server selection -->
   <div class="container mt-5">
